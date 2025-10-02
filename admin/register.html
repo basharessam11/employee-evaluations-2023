@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+
+<html lang="ar" style="height: 100%;">
+
+<!-- Mirrored from qaymni.com/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Nov 2022 22:28:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>قيمني</title>    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../fonts.googleapis.com/iconc484.css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp">
+    <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/bootstrap-icons%401.4.0/font/bootstrap-icons.css">
+    <!-- for iOS -> Safari --> 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/logo_manager_icon.png" />
+    <!-- for Android -> Chrome, Firefox and Opera --> 
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" sizes="192x192" href="images/logo_manager_icon.png">
+    <!-- jQuery -->
+    <script src="jQuery/jquery-3.2.1.min.js"></script>
+    <script src="jQuery/jquery-ui-1.12.1/jquery-ui.js"></script><!-- sortable -->
+    <script src="jQuery/jquery-ui-1.12.1/jquery.ui.touch-punch.min.js"></script><!-- sortable for touch devices -->
+    <!-- Bootstrap -->
+    <link type="text/css" href="bootstrap/bootstrap-4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="bootstrap/bootstrap-4.6.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap datepicker -->
+    <link type="text/css" href="bootstrap/datepicker/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="bootstrap/datepicker/jquery-ui.js"></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="stylec81e.css?2" />
+    <!-- My javascript -->
+    <script type="text/javascript" src="javaScript/javaScript3860.js?v=1"></script>
+    <!-- Tap payments Gateway -->
+    <script src="../cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js"></script>
+    <script src="../secure.gosell.io/js/sdk/tap.min.js"></script>
+</head>
+
+<body id="bodyWidth" onresize="screenResize(); return false;" style="width: 100%; min-height: 100%; padding-bottom: 80px; position: absolute; background-image: url(images/bg4.png); background-size: cover; background-repeat: no-repeat;">
+
+
+<div align="center" style="width: 100%; min-height: 100%;"><!-- /container -->
+    
+    <div align="left" style="width: 90%; max-width: 900px; min-height: 100%; position: relative;">
+        
+        <div style="width: 160px; padding-top: 10px; left: 20px;">
+            <a href="index.html"><img src="images/logoc81e.png?2" style="width: 140px;" /></a>
+        </div>
+        <div align="center" style="min-height: 100%;">
+
+            <a href="index.html"><font style="color: #ffba00; font-size: 16px;">الرئيسية</font></a>
+            <font>&nbsp&nbsp-&nbsp&nbsp</font>
+            <a href="login.html"><font style="color: #ffba00; font-size: 16px;">دخول</font></a>
+            <font>&nbsp&nbsp-&nbsp&nbsp</font>
+            <a href="register.html"><font style="color: #ffba00; font-size: 16px;">تسجيل</font></a>
+            <font>&nbsp&nbsp-&nbsp&nbsp</font>
+            <a href="price.html"><font style="color: #ffba00; font-size: 16px;">الأسعار</font></a>
+        </div>
+    </div>
+    
+    <div style="width: 90%; max-width: 900px; min-height: 100%;">
+
+<input id="backTdColor" type="hidden" value="#f1f1f1" />
+<input id="frontTdColor" type="hidden" value="#f7f7f7" />
+
+<div id="registerDiv" style="margin-top: 60px;">
+<table class="CurveBox20 Shadow1" style="width: 90%; max-width: 600px; margin-top: 50px; margin-bottom: 30px; background-color: #f7f7f7; border-collapse: separate; border-spacing: 0px;">
+    <tr align="center">
+        <td class="CurveTopRight20" id="td1" style="width: 33%; height: 100px; background-color: #f7f7f7;">
+            <div onclick="goToStep1(); return false;" style="cursor: pointer;">
+            <div style="height: 45px; width: 45px; border-radius: 50%; margin-top: 10px; background-color: #b7b7b7; display: inline-block;">
+                <p style="color: #ffffff; font-size: 28px; margin-top: 7px;"><b>1</b></p>
+            </div>
+            <div style="margin-top: 3px;"><font>المعلومات الشخصية</font></div>
+            </div>
+        </td>
+        <td id="td2" style="width: 34%; height: 100px; border-right: solid 1px #cbcbcb; border-left: solid 1px #cbcbcb; background-color: #ededed;">
+            <div onclick="goToStep2(); return false;" style="cursor: pointer;">
+            <div style="height: 45px; width: 45px; border-radius: 50%; margin-top: 10px; background-color: #ffba00; display: inline-block;">
+                <p style="color: #ffffff; font-size: 28px; margin-top: 7px;"><b>2</b></p>
+            </div>
+            <div style="margin-top: 3px;"><font>المحل أو الجهة</font></div>
+            </div>
+        </td>
+        <td class="CurveTopLeft20" id="td3" style="width: 33%; height: 100px; background-color: #ededed;">
+            <div onclick="goToStep3(); return false;" style="cursor: pointer;">
+            <div style="height: 45px; width: 45px; border-radius: 50%; margin-top: 10px; background-color: #75c34c; display: inline-block;">
+                <p style="color: #ffffff; font-size: 28px; margin-top: 7px;"><b>3</b></p>
+            </div>
+            <div style="margin-top: 3px;"><font>إنشاء الحساب</font></div>
+            </div>
+        </td>
+    </tr>
+    <tr align="center" style="height: 320px;">
+        <td colspan="3">
+
+            <div style="width: 90%; height: 290px; position: relative; display: inline-block;">
+
+                <div id="step1">
+                    <table style="width: 80%; max-width: 300px; margin-top: 50px;">
+                        <tr>
+                            <td>
+                                <font style="font-size: 10px;"><b>اسم الشخص المسؤول عن التقييم</b></font>
+                                <font style="font-size: 10px; color: #d60000;"><b>*</b></font>
+                                <input class="form-control" id="name" type="text" maxlength="40" placeholder="عمر محمد" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px;">
+                                <font style="font-size: 10px;"><b>رقم الجوال</b></font>
+                                <font style="font-size: 10px; color: #d60000;"><b>*</b></font>
+                                <input class="form-control justNumbers" id="mobile" type="tel" maxlength="10" placeholder="0555123456" data-toggle="popover" data-trigger="manual" data-placement="bottom" data-content="أرقام إنجليزية فقط" />
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <td style="padding-top: 10px;">
+                                <font style="font-size: 10px;"><b>البريد الإلكتروني</b></font>
+                                <font style="font-size: 10px; color: #d60000;"><b>*</b></font>
+                                <input class="form-control justEmails" id="email" type="email" maxlength="40" placeholder="name@site.com" data-toggle="popover" data-trigger="manual" data-placement="bottom" data-content="يرجى إدخال بريد إلكتروني صحيح" />
+                            </td>
+                        </tr>-->
+                    </table>
+                    <button class="btn btn-secondary" type="button" style="width: 120px; position: absolute; bottom: 10px; left: 10px; background-color: #ffba00; border: none;" onclick="goToStep2(); return false;"><div style="padding-top: 5px;">الخطوة 2</div></button>
+                </div>
+
+
+                <div id="step2" style="display: none;">
+                    <table style="width: 80%; max-width: 300px; margin-top: 80px;">
+                        <tr>
+                            <td>
+                                <font style="font-size: 10px;"><b>اسم المحل أو الجهة</b></font>
+                                <font style="font-size: 10px; color: #d60000;"><b>*</b></font>
+                                <input class="form-control" id="orgName" type="text" maxlength="50" placeholder="مطعم الهامبرجر اللذيذ" />
+                                <div align="left"><font style="font-size: 10px;">جميع البيانات يمكن تعديلها لاحقا</font></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-secondary" type="button" style="width: 120px; position: absolute; bottom: 10px; left: 10px; background-color: #ffba00; border: none;" onclick="goToStep3(); return false;"><div style="padding-top: 5px;">الخطوة 3</div></button>
+                </div>
+
+
+                <div id="step3" style="display: none;">
+                    <table style="width: 80%; max-width: 300px; margin-top: 20px;">
+                        <tr>
+                            <td style="padding-top: 10px;">
+                                <font style="font-size: 10px;"><b>كلمة المرور</b></font>
+                                <font style="font-size: 10px; color: #d60000;"><b>*</b></font>
+                                <font style="font-size: 10px;">(ستة أحرف على الأقل)</font>
+                                <input class="form-control justPasswords" id="password1" type="password" placeholder="كلمة المرور" maxlength="20" data-toggle="popover" data-trigger="manual" data-placement="bottom" data-content="إدخال خاطئ" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px;">
+                                <font style="font-size: 10px;"><b>كرر كلمة المرور</b></font>
+                                <font style="font-size: 10px; color: #d60000;"><b>*</b></font>
+                                <input class="form-control justPasswords" id="password2" type="password" placeholder="كرر كلمة المرور" maxlength="20" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 10px; font-size: 12px;">
+                                <input type="checkbox" id="agree" name="agree" style="display: inline;">
+                                <label style="display: inline;" for="agree">لقد قرأت <a href="terms.html" target="_blank" style="color: #656565; text-decoration: underline;">شروط الاستخدام</a> و<a href="privacy.html" target="_blank" style="color: #656565; text-decoration: underline;">سياسة الخصوصية</a> وأوافق عليها.</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="width: 80%; margin-top: 5px; font-size: 12px;">
+                        
+                    </div>
+                    <button class="GreenButton" type="button" style="width: 120px; position: absolute; bottom: 10px; left: 10px;" onclick="createAccount(); return false;">إنشاء</button>
+                </div>
+
+            </div>
+
+        </td>
+    </tr>
+</table>
+</div>
+
+
+<div class="CurveBox20 Shadow1" id="loadingDiv" style="width: 90%; max-width: 600px; margin-top: 50px; margin-bottom: 30px; padding: 100px 0px 100px 0px; background-color: #f7f7f7; display: none;">
+    <div><img src="images/loading.gif" style="width: 100px;" /></div>
+    <div><font>جاري الآن إنشاء الحساب</font></div>
+    <div><font>الرجاء الإنتظار...</font></div>
+</div>
+
+
+<div class="CurveBox20 Shadow1" id="accountCreatedDiv" style="width: 90%; max-width: 600px; margin-top: 40px; margin-bottom: 30px; padding: 50px 0px 50px 0px; background-color: #f7f7f7; display: none;">
+    <div><img src="images/done.png" style="width: 200px;" /></div>
+    <div><font style="font-size: 26px;">مبروك</font></div>
+    <div><font>تم إنشاء الحساب بنجاح</font></div>
+    <button class="btn btn-success" type="button" style="margin-top: 20px; background-color: #75c34c; border: none;" onclick="window.location = 'login.html';"><div style="margin-top: 3px;">الدخول على الحساب</div></button>
+</div>
+
+
+    </div>
+
+    <div align="center" id="footer" style="width: 90%; height: 80px; position: absolute; bottom: 0px; right: 50%; transform: translate(50%, 0);">
+        <font style="font-size: 12px; color: #aaaaaa;">جميع الحقوق محفوظة &copy; 2022 - 2021</font>
+        <img src="images/HoogaLogo.png" style="height: 12px; margin-top: -1px; filter: invert(0.6);" />
+        <div>
+            <a href="terms.html"><font style="font-size: 12px; color: #aaaaaa;">شروط الإستخدام</font></a>
+            <font style="font-size: 12px; color: #aaaaaa;">&nbsp&nbsp-&nbsp&nbsp</font>
+            <a href="privacy.html"><font style="font-size: 12px; color: #aaaaaa;">سياسة الخصوصية</font></a>
+            <font style="font-size: 12px; color: #aaaaaa;">&nbsp&nbsp-&nbsp&nbsp</font>
+            <a href="contact.html"><font style="font-size: 12px; color: #aaaaaa;">تواصل معنا</font></a>
+        </div>
+        
+        <div>
+            <img src="images/mada.png" style="height: 22px; margin-right: 0px; margin-left: 5px; display: ;" />
+            <img src="images/master_visa.png" style="height: 30px; margin-right: 10px; margin-left: 5px; display: none;" />
+            <img src="images/paymentLogo_mada.svg" style="height: 35px; margin-right: 0px; margin-left: 5px; display: none;" />
+            <img src="images/paymentLogo_mastercard.svg" style="height: 35px; margin-right: 10px; margin-left: 5px; display: ;" />
+            <img src="images/paymentLogo_visa.svg" style="height: 35px; margin-right: 10px; margin-left: 5px; display: ;" />
+            <img src="images/paymentLogo_americanExpress.svg" style="height: 30px; margin-right: 10px; margin-left: 5px; display: none;" />
+            <img src="images/applePay_icon.svg" style="height: 25px; margin-right: 10px; margin-left: 5px; display: ;" />
+            <img src="images/stcpay.png" style="height: 20px; margin-right: 10px; margin-left: 5px; display: none;" />
+            <img src="images/paypal.png" style="height: 34px; margin-right: 10px; margin-left: 5px; display: none;" />
+        </div>
+        
+        <div style="visibility: hidden;"><!-- لن يتم عرض شيء هنا ولكن ليتم تحميل الصور فور الإنتهاء من تحميل الصفحة فتصبح جاهزه إذا تم الضغط عليها -->
+            <img src="images/face1select.png" style="height: 10px;" />
+            <img src="images/face2select.png" style="height: 10px;" />
+            <img src="images/face3select.png" style="height: 10px;" />
+            <img src="images/face4select.png" style="height: 10px;" />
+            <img src="images/face5select.png" style="height: 10px;" />
+            <img src="images/ques1select.png" style="height: 10px;" />
+            <img src="images/ques2select.png" style="height: 10px;" />
+            <img src="images/ques3select.png" style="height: 10px;" />
+            <img src="images/logo_manager_icon.png" style="height: 10px;" />
+            <img src="images/logo_dashboard_icon.png" style="height: 10px;" />
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+<!-- Mirrored from qaymni.com/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Nov 2022 22:28:30 GMT -->
+</html>
